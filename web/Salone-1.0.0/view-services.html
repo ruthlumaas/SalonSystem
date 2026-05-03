@@ -177,79 +177,79 @@
 <!-- 🔥 SCRIPT -->
 <script>
 // 🔥 GET CATEGORY ID gikan sa previous page
-const categoryId = localStorage.getItem("categoryId");
+    const categoryId = localStorage.getItem("categoryId");
 
-// 🔥 DEBUG (pwede nimo i-remove later)
-console.log("Selected Category:", categoryId);
+    // 🔥 DEBUG (pwede nimo i-remove later)
+    console.log("Selected Category:", categoryId);
 
-// 🔥 FETCH SERVICES FROM API
-fetch("https://localhost:7020/api/Service")
-.then(response => response.json())
-.then(data => {
+    // 🔥 FETCH SERVICES FROM API
+    fetch("https://localhost:7020/api/Service")
+    .then(response => response.json())
+    .then(data => {
 
-    console.log("API Data:", data); // debug
+        console.log("API Data:", data); // debug
 
-    const container = document.getElementById("servicesContainer");
+        const container = document.getElementById("servicesContainer");
 
-    // 🔥 CHECK IF WALAY DATA
-    if(!data || data.length === 0){
-        container.innerHTML = "<h3 class='text-center'>No services found</h3>";
-        return;
-    }
+        // 🔥 CHECK IF WALAY DATA
+        if(!data || data.length === 0){
+            container.innerHTML = "<h3 class='text-center'>No services found</h3>";
+            return;
+        }
 
-    // 🔥 FILTER BY CATEGORY
-    const filtered = data.filter(service => service.categoryId == categoryId);
+        // 🔥 FILTER BY CATEGORY
+        const filtered = data.filter(service => service.categoryId == categoryId);
 
-    if(filtered.length === 0){
-        container.innerHTML = "<h3 class='text-center'>No services in this category</h3>";
-        return;
-    }
+        if(filtered.length === 0){
+            container.innerHTML = "<h3 class='text-center'>No services in this category</h3>";
+            return;
+        }
 
-    // 🔥 DISPLAY SERVICES
-    filtered.forEach((service, index) => {
+        // 🔥 DISPLAY SERVICES
+        filtered.forEach((service, index) => {
 
-        container.innerHTML += `
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.${index}s">
+            container.innerHTML += `
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.${index}s">
 
-                <div class="service-item h-100 p-4 border text-center">
+                    <div class="service-item h-100 p-4 border text-center">
 
-                    <img src="${service.imageUrl}" 
-                         class="img-fluid mb-3"
-                         style="height:200px; object-fit:cover; border-radius:10px;"
-                         alt="service image">
+                        <img src="${service.imageUrl}" 
+                            class="img-fluid mb-3"
+                            style="height:200px; object-fit:cover; border-radius:10px;"
+                            alt="service image">
 
-                    <h4 class="mb-2">${service.name}</h4>
+                        <h4 class="mb-2">${service.name}</h4>
 
-                    <p class="text-primary fw-bold mb-2">
-                        ₱${service.price}
-                    </p>
+                        <p class="text-primary fw-bold mb-2">
+                            ₱${service.price}
+                        </p>
 
-                   <button class="btn btn-sm btn-primary text-uppercase"
-                           onclick="book(${service.id}, '${service.name}', '${service.categoryName}')">
-                        Book Now
-                    </button>
+                    <button class="btn btn-sm btn-primary text-uppercase"
+                            onclick="book(${service.id}, '${service.name}', '${service.categoryName}')">
+                            Book Now
+                        </button>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        });
+
+    })
+    .catch(error => {
+        console.error("ERROR:", error);
+        document.getElementById("servicesContainer").innerHTML =
+            "<h3 class='text-danger text-center'>Error loading services</h3>";
     });
 
-})
-.catch(error => {
-    console.error("ERROR:", error);
-    document.getElementById("servicesContainer").innerHTML =
-        "<h3 class='text-danger text-center'>Error loading services</h3>";
-});
+    // 🔥 BOOK FUNCTION
+        function book(id, name, categoryName){
 
-// 🔥 BOOK FUNCTION
-    function book(id, name, categoryName){
+            const fullService = categoryName.toUpperCase() + " : " + name.toUpperCase();
 
-        const fullService = categoryName.toUpperCase() + " : " + name.toUpperCase();
+            localStorage.setItem("serviceId", id);
+            localStorage.setItem("serviceName", fullService);
 
-        localStorage.setItem("serviceId", id);
-        localStorage.setItem("serviceName", fullService);
-
-        window.location.href = "booking.html";
-    }
+            window.location.href = "booking.html";
+        }
 </script>
 
 </body>
