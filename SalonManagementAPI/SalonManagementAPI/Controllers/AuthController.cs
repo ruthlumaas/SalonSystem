@@ -35,15 +35,15 @@ namespace SalonManagementAPI.Controllers
 
 
         [HttpPost("login")]
-        public IActionResult Login(LoginDto login)
+        public IActionResult Login(User user)
         {
-            var user = _context.Customers
-                .FirstOrDefault(x => x.Email == login.Email && x.Password == login.Password);
+            var u = _context.Users
+                .FirstOrDefault(x => x.Username == user.Username && x.Password == user.Password);
 
-            if (user == null)
-                return Unauthorized("Invalid email or password");
+            if (u == null)
+                return Unauthorized("Invalid username or password");
 
-            return Ok(user);
+            return Ok(u);
         }
     }
 }

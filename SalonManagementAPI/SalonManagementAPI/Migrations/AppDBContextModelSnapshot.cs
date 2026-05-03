@@ -130,6 +130,25 @@ namespace SalonManagementAPI.Migrations
                     b.ToTable("Services");
                 });
 
+            modelBuilder.Entity("SalonManagementAPI.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("SalonManagementAPI.Models.Service", b =>
                 {
                     b.HasOne("SalonManagementAPI.Models.Category", "Category")
