@@ -24,7 +24,7 @@ namespace Car_Renting_Management_System
             InitializeComponent();
             client.BaseAddress = new Uri(baseUrl);
         }
-        private async void Services_Load(object sender, EventArgs e)
+        private async void Services_Load_1(object sender, EventArgs e)
         {
             await LoadCategories();
             await LoadServices();
@@ -34,20 +34,19 @@ namespace Car_Renting_Management_System
         // ================= GET CATEGORY =================
         async Task LoadCategories()
         {
-            var res = await client.GetAsync("Category");
-            var json = await res.Content.ReadAsStringAsync();
+            var res = await client.GetStringAsync("Category");
 
-            dynamic data = JsonConvert.DeserializeObject(json);
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(res);
 
             cmbServiceCategory.Items.Clear();
             cmbSearchCategory.Items.Clear();
 
             cmbSearchCategory.Items.Add("All");
 
-            foreach (var item in data)
+            foreach (DataRow row in dt.Rows)
             {
-                cmbServiceCategory.Items.Add((string)item.name);
-                cmbSearchCategory.Items.Add((string)item.name);
+                cmbServiceCategory.Items.Add(row["name"].ToString());
+                cmbSearchCategory.Items.Add(row["name"].ToString());
             }
 
             cmbServiceCategory.SelectedIndex = 0;
@@ -57,12 +56,11 @@ namespace Car_Renting_Management_System
         // ================= GET SERVICES =================
         async Task LoadServices()
         {
-            var res = await client.GetAsync("Service");
-            var json = await res.Content.ReadAsStringAsync();
+            var res = await client.GetStringAsync("Service");
 
-            var list = JsonConvert.DeserializeObject<List<dynamic>>(json);
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(res);
 
-            dgvDisplayServices.DataSource = list;
+            dgvDisplayServices.DataSource = dt;
         }
 
         private async void btnAddService_Click(object sender, EventArgs e)
@@ -75,10 +73,12 @@ namespace Car_Renting_Management_System
 
             var obj = new
             {
-                category = cmbServiceCategory.Text,
                 name = txtServiceName.Text,
-                price = txtServicePrice.Text,
-                duration = txtServiceDuration.Text
+                price = Convert.ToDecimal(txtServicePrice.Text),
+                duration = Convert.ToInt32(txtServiceDuration.Text),
+                categoryId = cmbServiceCategory.SelectedIndex + 1, // simple mapping
+                imageUrl = "",
+                isActive = true
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json");
@@ -103,11 +103,11 @@ namespace Car_Renting_Management_System
             {
                 var row = dgvDisplayServices.Rows[e.RowIndex];
 
-                txtServiceID.Text = row.Cells["id"].Value.ToString();
-                cmbServiceCategory.Text = row.Cells["category"].Value.ToString();
-                txtServiceName.Text = row.Cells["name"].Value.ToString();
-                txtServicePrice.Text = row.Cells["price"].Value.ToString();
-                txtServiceDuration.Text = row.Cells["duration"].Value.ToString();
+                txtServiceID.Text = row.Cells["Id"].Value.ToString();
+                txtServiceName.Text = row.Cells["Name"].Value.ToString();
+                txtServicePrice.Text = row.Cells["Price"].Value.ToString();
+                txtServiceDuration.Text = row.Cells["Duration"].Value.ToString();
+                cmbServiceCategory.Text = row.Cells["CategoryName"].Value.ToString();
 
                 selectedServiceID = txtServiceID.Text;
 
@@ -140,16 +140,18 @@ namespace Car_Renting_Management_System
 
         private async void btnServiceSearch_Click(object sender, EventArgs e)
         {
-            var res = await client.GetAsync("Service");
-            var json = await res.Content.ReadAsStringAsync();
+            var res = await client.GetStringAsync("Service");
 
-            var list = JsonConvert.DeserializeObject<List<dynamic>>(json);
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(res);
 
-            var filtered = list.FindAll(x =>
-                x.name.ToString().ToLower().Contains(txtServiceSearch.Text.ToLower())
-            );
+            var filtered = dt.AsEnumerable()
+                .Where(x => x["Name"].ToString().ToLower()
+                .Contains(txtServiceSearch.Text.ToLower()));
 
-            dgvDisplayServices.DataSource = filtered;
+            if (filtered.Any())
+                dgvDisplayServices.DataSource = filtered.CopyToDataTable();
+            else
+                dgvDisplayServices.DataSource = null;
         }
 
         // ================= UTIL =================
@@ -177,22 +179,23 @@ namespace Car_Renting_Management_System
 
         private async void cmbSearchCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var res = await client.GetAsync("Service");
-            var json = await res.Content.ReadAsStringAsync();
+            var res = await client.GetStringAsync("Service");
 
-            var list = JsonConvert.DeserializeObject<List<dynamic>>(json);
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(res);
 
             if (cmbSearchCategory.Text == "All")
             {
-                dgvDisplayServices.DataSource = list;
+                dgvDisplayServices.DataSource = dt;
             }
             else
             {
-                var filtered = list.FindAll(x =>
-                    x.category.ToString() == cmbSearchCategory.Text
-                );
+                var filtered = dt.AsEnumerable()
+                    .Where(x => x["CategoryName"].ToString() == cmbSearchCategory.Text);
 
-                dgvDisplayServices.DataSource = filtered;
+                if (filtered.Any())
+                    dgvDisplayServices.DataSource = filtered.CopyToDataTable();
+                else
+                    dgvDisplayServices.DataSource = null;
             }
         }
     }

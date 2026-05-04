@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbServiceCategory = new MetroFramework.Controls.MetroComboBox();
             this.dgvDisplayServices = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txtServicePrice = new MonoFlat.MonoFlat_TextBox();
@@ -42,25 +42,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtServiceSearch = new MonoFlat.MonoFlat_TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDeleteServices = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnUpdateSearch = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnServiceSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtServiceID = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddService = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnBrowseServiceImg = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pbxServiceImage = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBrowseServiceImg = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pbxServiceImage = new System.Windows.Forms.PictureBox();
-            this.btnDeleteServices = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnUpdateSearch = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnServiceSearch = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddService = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayServices)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxServiceImage)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbServiceCategory
@@ -74,28 +74,28 @@
             // 
             // dgvDisplayServices
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDisplayServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDisplayServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDisplayServices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.dgvDisplayServices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDisplayServices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDisplayServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDisplayServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDisplayServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDisplayServices.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDisplayServices.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDisplayServices.DoubleBuffered = true;
             this.dgvDisplayServices.EnableHeadersVisualStyles = false;
             this.dgvDisplayServices.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
@@ -147,6 +147,8 @@
             this.cmbSearchCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
             this.cmbSearchCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchCategory.FormattingEnabled = true;
+            this.cmbSearchCategory.Items.AddRange(new object[] {
+            "All"});
             this.cmbSearchCategory.Location = new System.Drawing.Point(356, 30);
             this.cmbSearchCategory.Name = "cmbSearchCategory";
             this.cmbSearchCategory.Size = new System.Drawing.Size(130, 21);
@@ -231,154 +233,6 @@
             this.groupBox2.Size = new System.Drawing.Size(808, 75);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(287, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 19);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "List By";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(323, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 22);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Service ID";
-            // 
-            // txtServiceID
-            // 
-            this.txtServiceID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.txtServiceID.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServiceID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceID.ForeColor = System.Drawing.Color.White;
-            this.txtServiceID.Location = new System.Drawing.Point(502, 39);
-            this.txtServiceID.Multiline = true;
-            this.txtServiceID.Name = "txtServiceID";
-            this.txtServiceID.ReadOnly = true;
-            this.txtServiceID.Size = new System.Drawing.Size(279, 34);
-            this.txtServiceID.TabIndex = 59;
-            this.txtServiceID.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            this.groupBox1.Controls.Add(this.btnAddService);
-            this.groupBox1.Controls.Add(this.cmbServiceCategory);
-            this.groupBox1.Controls.Add(this.btnBrowseServiceImg);
-            this.groupBox1.Controls.Add(this.pbxServiceImage);
-            this.groupBox1.Controls.Add(this.txtServiceID);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtServiceDuration);
-            this.groupBox1.Controls.Add(this.txtServicePrice);
-            this.groupBox1.Controls.Add(this.txtServiceName);
-            this.groupBox1.Location = new System.Drawing.Point(181, 52);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(820, 431);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(324, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Service Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(1117, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "X";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(455, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Services Management";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1141, 46);
-            this.panel1.TabIndex = 15;
-            // 
-            // btnBrowseServiceImg
-            // 
-            this.btnBrowseServiceImg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBrowseServiceImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBrowseServiceImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBrowseServiceImg.BorderRadius = 0;
-            this.btnBrowseServiceImg.ButtonText = "Browse";
-            this.btnBrowseServiceImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBrowseServiceImg.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBrowseServiceImg.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBrowseServiceImg.Iconimage = global::Car_Renting_Management_System.Properties.Resources.if_folder_saved_search_118905;
-            this.btnBrowseServiceImg.Iconimage_right = null;
-            this.btnBrowseServiceImg.Iconimage_right_Selected = null;
-            this.btnBrowseServiceImg.Iconimage_Selected = null;
-            this.btnBrowseServiceImg.IconMarginLeft = 0;
-            this.btnBrowseServiceImg.IconMarginRight = 0;
-            this.btnBrowseServiceImg.IconRightVisible = true;
-            this.btnBrowseServiceImg.IconRightZoom = 0D;
-            this.btnBrowseServiceImg.IconVisible = true;
-            this.btnBrowseServiceImg.IconZoom = 75D;
-            this.btnBrowseServiceImg.IsTab = false;
-            this.btnBrowseServiceImg.Location = new System.Drawing.Point(98, 232);
-            this.btnBrowseServiceImg.Name = "btnBrowseServiceImg";
-            this.btnBrowseServiceImg.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnBrowseServiceImg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnBrowseServiceImg.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBrowseServiceImg.selected = false;
-            this.btnBrowseServiceImg.Size = new System.Drawing.Size(104, 41);
-            this.btnBrowseServiceImg.TabIndex = 13;
-            this.btnBrowseServiceImg.Text = "Browse";
-            this.btnBrowseServiceImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBrowseServiceImg.Textcolor = System.Drawing.Color.White;
-            this.btnBrowseServiceImg.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // pbxServiceImage
-            // 
-            this.pbxServiceImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxServiceImage.Location = new System.Drawing.Point(43, 63);
-            this.pbxServiceImage.Name = "pbxServiceImage";
-            this.pbxServiceImage.Size = new System.Drawing.Size(232, 155);
-            this.pbxServiceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxServiceImage.TabIndex = 60;
-            this.pbxServiceImage.TabStop = false;
             // 
             // btnDeleteServices
             // 
@@ -484,6 +338,66 @@
             this.btnServiceSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServiceSearch.Click += new System.EventHandler(this.btnServiceSearch_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label11.Location = new System.Drawing.Point(287, 30);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 19);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "List By";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label3.Location = new System.Drawing.Point(323, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 22);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Service ID";
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.txtServiceID.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtServiceID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceID.ForeColor = System.Drawing.Color.White;
+            this.txtServiceID.Location = new System.Drawing.Point(502, 39);
+            this.txtServiceID.Multiline = true;
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.ReadOnly = true;
+            this.txtServiceID.Size = new System.Drawing.Size(279, 34);
+            this.txtServiceID.TabIndex = 59;
+            this.txtServiceID.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            this.groupBox1.Controls.Add(this.btnAddService);
+            this.groupBox1.Controls.Add(this.cmbServiceCategory);
+            this.groupBox1.Controls.Add(this.btnBrowseServiceImg);
+            this.groupBox1.Controls.Add(this.pbxServiceImage);
+            this.groupBox1.Controls.Add(this.txtServiceID);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtServiceDuration);
+            this.groupBox1.Controls.Add(this.txtServicePrice);
+            this.groupBox1.Controls.Add(this.txtServiceName);
+            this.groupBox1.Location = new System.Drawing.Point(181, 52);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(820, 431);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            // 
             // btnAddService
             // 
             this.btnAddService.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -519,6 +433,94 @@
             this.btnAddService.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
+            // btnBrowseServiceImg
+            // 
+            this.btnBrowseServiceImg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBrowseServiceImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBrowseServiceImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBrowseServiceImg.BorderRadius = 0;
+            this.btnBrowseServiceImg.ButtonText = "Browse";
+            this.btnBrowseServiceImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBrowseServiceImg.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBrowseServiceImg.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBrowseServiceImg.Iconimage = global::Car_Renting_Management_System.Properties.Resources.if_folder_saved_search_118905;
+            this.btnBrowseServiceImg.Iconimage_right = null;
+            this.btnBrowseServiceImg.Iconimage_right_Selected = null;
+            this.btnBrowseServiceImg.Iconimage_Selected = null;
+            this.btnBrowseServiceImg.IconMarginLeft = 0;
+            this.btnBrowseServiceImg.IconMarginRight = 0;
+            this.btnBrowseServiceImg.IconRightVisible = true;
+            this.btnBrowseServiceImg.IconRightZoom = 0D;
+            this.btnBrowseServiceImg.IconVisible = true;
+            this.btnBrowseServiceImg.IconZoom = 75D;
+            this.btnBrowseServiceImg.IsTab = false;
+            this.btnBrowseServiceImg.Location = new System.Drawing.Point(98, 232);
+            this.btnBrowseServiceImg.Name = "btnBrowseServiceImg";
+            this.btnBrowseServiceImg.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnBrowseServiceImg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnBrowseServiceImg.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBrowseServiceImg.selected = false;
+            this.btnBrowseServiceImg.Size = new System.Drawing.Size(104, 41);
+            this.btnBrowseServiceImg.TabIndex = 13;
+            this.btnBrowseServiceImg.Text = "Browse";
+            this.btnBrowseServiceImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBrowseServiceImg.Textcolor = System.Drawing.Color.White;
+            this.btnBrowseServiceImg.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pbxServiceImage
+            // 
+            this.pbxServiceImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxServiceImage.Location = new System.Drawing.Point(43, 63);
+            this.pbxServiceImage.Name = "pbxServiceImage";
+            this.pbxServiceImage.Size = new System.Drawing.Size(232, 155);
+            this.pbxServiceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxServiceImage.TabIndex = 60;
+            this.pbxServiceImage.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.Location = new System.Drawing.Point(324, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 22);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Service Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.Location = new System.Drawing.Point(1117, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "X";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(455, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Services Management";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1141, 46);
+            this.panel1.TabIndex = 15;
+            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,14 +533,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Services";
             this.Text = "Services";
+            this.Load += new System.EventHandler(this.Services_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplayServices)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxServiceImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxServiceImage)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -30,6 +30,7 @@ namespace SalonManagementAPI.Controllers
                     s.Id,
                     s.Name,
                     s.Price,
+                    s.Duration,
                     s.CategoryId,
                     s.ImageUrl,
                     CategoryName = s.Category.Name
