@@ -162,7 +162,17 @@ namespace Car_Renting_Management_System
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            
+            foreach (Form child in this.MdiChildren)
+            {
+                child.Close();
+            }
+
+            Customer c = new Customer();
+
+            c.MdiParent = this;
+            c.Dock = DockStyle.Fill;
+
+            c.Show();
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)

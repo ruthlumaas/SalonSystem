@@ -20,7 +20,13 @@ namespace SalonManagementAPI.Controllers
         [HttpGet]
         public IActionResult GetCustomers()
         {
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers
+                 .Select(c => new
+                 {
+                     c.Id,
+                     c.FullName,
+                     c.Email
+                 }).ToList();
 
             return Ok(customers);
         }
