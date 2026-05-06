@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace SalonManagementAPI.Models
 {
@@ -8,9 +9,10 @@ namespace SalonManagementAPI.Models
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int Duration { get; set; }
-
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+
+        [JsonIgnore]
+        public Category? Category { get; set; }
         public string ImageUrl { get; set; }  
 
         public bool IsActive { get; set; }

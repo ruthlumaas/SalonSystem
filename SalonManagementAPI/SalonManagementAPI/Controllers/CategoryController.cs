@@ -24,15 +24,10 @@ namespace SalonManagementAPI.Controllers
         [HttpPost]
         public IActionResult Add(Category category)
         {
-            var categories = _context.Categories
-                .Select(c => new
-                {
-                    c.Id,
-                    c.Name
-                })
-                .ToList();
+            _context.Categories.Add(category);
+            _context.SaveChanges();
 
-            return Ok(categories);
+            return Ok(category);
         }
     }
 }

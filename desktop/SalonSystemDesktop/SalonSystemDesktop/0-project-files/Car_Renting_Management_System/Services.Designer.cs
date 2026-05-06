@@ -28,31 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbServiceCategory = new MetroFramework.Controls.MetroComboBox();
             this.dgvDisplayServices = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.txtServicePrice = new MonoFlat.MonoFlat_TextBox();
-            this.txtServiceName = new MonoFlat.MonoFlat_TextBox();
             this.cmbSearchCategory = new System.Windows.Forms.ComboBox();
-            this.txtServiceDuration = new MonoFlat.MonoFlat_TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtServiceSearch = new MonoFlat.MonoFlat_TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtServiceSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDeleteServices = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnUpdateSearch = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnServiceSearch = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtServiceID = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtServiceID = new MonoFlat.MonoFlat_Label();
             this.btnAddService = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBrowseServiceImg = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbxServiceImage = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtServiceDuration = new MonoFlat.MonoFlat_TextBox();
+            this.txtServicePrice = new MonoFlat.MonoFlat_TextBox();
+            this.txtServiceName = new MonoFlat.MonoFlat_TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -74,28 +73,28 @@
             // 
             // dgvDisplayServices
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDisplayServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDisplayServices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDisplayServices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.dgvDisplayServices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDisplayServices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDisplayServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDisplayServices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDisplayServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDisplayServices.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDisplayServices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDisplayServices.DoubleBuffered = true;
             this.dgvDisplayServices.EnableHeadersVisualStyles = false;
             this.dgvDisplayServices.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
@@ -110,38 +109,6 @@
             this.dgvDisplayServices.TabIndex = 17;
             this.dgvDisplayServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisplayServices_CellClick);
             // 
-            // txtServicePrice
-            // 
-            this.txtServicePrice.BackColor = System.Drawing.Color.Transparent;
-            this.txtServicePrice.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtServicePrice.ForeColor = System.Drawing.Color.White;
-            this.txtServicePrice.Image = null;
-            this.txtServicePrice.Location = new System.Drawing.Point(502, 188);
-            this.txtServicePrice.MaxLength = 32767;
-            this.txtServicePrice.Multiline = false;
-            this.txtServicePrice.Name = "txtServicePrice";
-            this.txtServicePrice.ReadOnly = false;
-            this.txtServicePrice.Size = new System.Drawing.Size(279, 41);
-            this.txtServicePrice.TabIndex = 2;
-            this.txtServicePrice.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtServicePrice.UseSystemPasswordChar = false;
-            // 
-            // txtServiceName
-            // 
-            this.txtServiceName.BackColor = System.Drawing.Color.Transparent;
-            this.txtServiceName.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtServiceName.ForeColor = System.Drawing.Color.White;
-            this.txtServiceName.Image = null;
-            this.txtServiceName.Location = new System.Drawing.Point(502, 137);
-            this.txtServiceName.MaxLength = 32767;
-            this.txtServiceName.Multiline = false;
-            this.txtServiceName.Name = "txtServiceName";
-            this.txtServiceName.ReadOnly = false;
-            this.txtServiceName.Size = new System.Drawing.Size(279, 41);
-            this.txtServiceName.TabIndex = 1;
-            this.txtServiceName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtServiceName.UseSystemPasswordChar = false;
-            // 
             // cmbSearchCategory
             // 
             this.cmbSearchCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
@@ -154,22 +121,6 @@
             this.cmbSearchCategory.Size = new System.Drawing.Size(130, 21);
             this.cmbSearchCategory.TabIndex = 16;
             this.cmbSearchCategory.SelectedIndexChanged += new System.EventHandler(this.cmbSearchCategory_SelectedIndexChanged);
-            // 
-            // txtServiceDuration
-            // 
-            this.txtServiceDuration.BackColor = System.Drawing.Color.Transparent;
-            this.txtServiceDuration.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtServiceDuration.ForeColor = System.Drawing.Color.White;
-            this.txtServiceDuration.Image = null;
-            this.txtServiceDuration.Location = new System.Drawing.Point(502, 238);
-            this.txtServiceDuration.MaxLength = 32767;
-            this.txtServiceDuration.Multiline = false;
-            this.txtServiceDuration.Name = "txtServiceDuration";
-            this.txtServiceDuration.ReadOnly = false;
-            this.txtServiceDuration.Size = new System.Drawing.Size(279, 41);
-            this.txtServiceDuration.TabIndex = 3;
-            this.txtServiceDuration.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtServiceDuration.UseSystemPasswordChar = false;
             // 
             // label7
             // 
@@ -204,35 +155,40 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Duration";
             // 
-            // txtServiceSearch
-            // 
-            this.txtServiceSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txtServiceSearch.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtServiceSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.txtServiceSearch.Image = null;
-            this.txtServiceSearch.Location = new System.Drawing.Point(118, 19);
-            this.txtServiceSearch.MaxLength = 32767;
-            this.txtServiceSearch.Multiline = false;
-            this.txtServiceSearch.Name = "txtServiceSearch";
-            this.txtServiceSearch.ReadOnly = false;
-            this.txtServiceSearch.Size = new System.Drawing.Size(151, 41);
-            this.txtServiceSearch.TabIndex = 11;
-            this.txtServiceSearch.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtServiceSearch.UseSystemPasswordChar = false;
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtServiceSearch);
             this.groupBox2.Controls.Add(this.btnDeleteServices);
             this.groupBox2.Controls.Add(this.cmbSearchCategory);
             this.groupBox2.Controls.Add(this.btnUpdateSearch);
-            this.groupBox2.Controls.Add(this.btnServiceSearch);
-            this.groupBox2.Controls.Add(this.txtServiceSearch);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(6, 348);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(808, 75);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
+            // 
+            // txtServiceSearch
+            // 
+            this.txtServiceSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtServiceSearch.DefaultText = "Search by ID and Name";
+            this.txtServiceSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtServiceSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtServiceSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtServiceSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtServiceSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtServiceSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtServiceSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txtServiceSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtServiceSearch.Location = new System.Drawing.Point(6, 19);
+            this.txtServiceSearch.Name = "txtServiceSearch";
+            this.txtServiceSearch.PlaceholderText = "";
+            this.txtServiceSearch.SelectedText = "";
+            this.txtServiceSearch.Size = new System.Drawing.Size(263, 36);
+            this.txtServiceSearch.TabIndex = 63;
+            this.txtServiceSearch.TextChanged += new System.EventHandler(this.txtServiceSearch_TextChanged_1);
+            this.txtServiceSearch.Enter += new System.EventHandler(this.txtServiceSearch_Enter_1);
+            this.txtServiceSearch.Leave += new System.EventHandler(this.txtServiceSearch_Leave_1);
             // 
             // btnDeleteServices
             // 
@@ -302,41 +258,7 @@
             this.btnUpdateSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateSearch.Textcolor = System.Drawing.Color.White;
             this.btnUpdateSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnServiceSearch
-            // 
-            this.btnServiceSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnServiceSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnServiceSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnServiceSearch.BorderRadius = 0;
-            this.btnServiceSearch.ButtonText = "Search";
-            this.btnServiceSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnServiceSearch.DisabledColor = System.Drawing.Color.Gray;
-            this.btnServiceSearch.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnServiceSearch.Iconimage = global::Car_Renting_Management_System.Properties.Resources.if_folder_saved_search_118905;
-            this.btnServiceSearch.Iconimage_right = null;
-            this.btnServiceSearch.Iconimage_right_Selected = null;
-            this.btnServiceSearch.Iconimage_Selected = null;
-            this.btnServiceSearch.IconMarginLeft = 0;
-            this.btnServiceSearch.IconMarginRight = 0;
-            this.btnServiceSearch.IconRightVisible = true;
-            this.btnServiceSearch.IconRightZoom = 0D;
-            this.btnServiceSearch.IconVisible = true;
-            this.btnServiceSearch.IconZoom = 75D;
-            this.btnServiceSearch.IsTab = false;
-            this.btnServiceSearch.Location = new System.Drawing.Point(7, 19);
-            this.btnServiceSearch.Name = "btnServiceSearch";
-            this.btnServiceSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnServiceSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnServiceSearch.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnServiceSearch.selected = false;
-            this.btnServiceSearch.Size = new System.Drawing.Size(104, 41);
-            this.btnServiceSearch.TabIndex = 12;
-            this.btnServiceSearch.Text = "Search";
-            this.btnServiceSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServiceSearch.Textcolor = System.Drawing.Color.White;
-            this.btnServiceSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServiceSearch.Click += new System.EventHandler(this.btnServiceSearch_Click);
+            this.btnUpdateSearch.Click += new System.EventHandler(this.btnUpdateSearch_Click);
             // 
             // label11
             // 
@@ -360,29 +282,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Service ID";
             // 
-            // txtServiceID
-            // 
-            this.txtServiceID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.txtServiceID.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtServiceID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServiceID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceID.ForeColor = System.Drawing.Color.White;
-            this.txtServiceID.Location = new System.Drawing.Point(502, 39);
-            this.txtServiceID.Multiline = true;
-            this.txtServiceID.Name = "txtServiceID";
-            this.txtServiceID.ReadOnly = true;
-            this.txtServiceID.Size = new System.Drawing.Size(279, 34);
-            this.txtServiceID.TabIndex = 59;
-            this.txtServiceID.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(143)))), ((int)(((byte)(90)))));
+            this.groupBox1.Controls.Add(this.txtServiceID);
             this.groupBox1.Controls.Add(this.btnAddService);
             this.groupBox1.Controls.Add(this.cmbServiceCategory);
             this.groupBox1.Controls.Add(this.btnBrowseServiceImg);
             this.groupBox1.Controls.Add(this.pbxServiceImage);
-            this.groupBox1.Controls.Add(this.txtServiceID);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
@@ -397,6 +304,18 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 431);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.AutoSize = true;
+            this.txtServiceID.BackColor = System.Drawing.Color.Transparent;
+            this.txtServiceID.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServiceID.ForeColor = System.Drawing.Color.White;
+            this.txtServiceID.Location = new System.Drawing.Point(499, 51);
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.Size = new System.Drawing.Size(52, 17);
+            this.txtServiceID.TabIndex = 62;
+            this.txtServiceID.Text = "           ";
             // 
             // btnAddService
             // 
@@ -466,6 +385,7 @@
             this.btnBrowseServiceImg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBrowseServiceImg.Textcolor = System.Drawing.Color.White;
             this.btnBrowseServiceImg.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseServiceImg.Click += new System.EventHandler(this.btnBrowseServiceImg_Click);
             // 
             // pbxServiceImage
             // 
@@ -487,6 +407,54 @@
             this.label4.Size = new System.Drawing.Size(138, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Service Name";
+            // 
+            // txtServiceDuration
+            // 
+            this.txtServiceDuration.BackColor = System.Drawing.Color.Transparent;
+            this.txtServiceDuration.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtServiceDuration.ForeColor = System.Drawing.Color.White;
+            this.txtServiceDuration.Image = null;
+            this.txtServiceDuration.Location = new System.Drawing.Point(502, 238);
+            this.txtServiceDuration.MaxLength = 32767;
+            this.txtServiceDuration.Multiline = false;
+            this.txtServiceDuration.Name = "txtServiceDuration";
+            this.txtServiceDuration.ReadOnly = false;
+            this.txtServiceDuration.Size = new System.Drawing.Size(279, 41);
+            this.txtServiceDuration.TabIndex = 3;
+            this.txtServiceDuration.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtServiceDuration.UseSystemPasswordChar = false;
+            // 
+            // txtServicePrice
+            // 
+            this.txtServicePrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtServicePrice.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtServicePrice.ForeColor = System.Drawing.Color.White;
+            this.txtServicePrice.Image = null;
+            this.txtServicePrice.Location = new System.Drawing.Point(502, 188);
+            this.txtServicePrice.MaxLength = 32767;
+            this.txtServicePrice.Multiline = false;
+            this.txtServicePrice.Name = "txtServicePrice";
+            this.txtServicePrice.ReadOnly = false;
+            this.txtServicePrice.Size = new System.Drawing.Size(279, 41);
+            this.txtServicePrice.TabIndex = 2;
+            this.txtServicePrice.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtServicePrice.UseSystemPasswordChar = false;
+            // 
+            // txtServiceName
+            // 
+            this.txtServiceName.BackColor = System.Drawing.Color.Transparent;
+            this.txtServiceName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtServiceName.ForeColor = System.Drawing.Color.White;
+            this.txtServiceName.Image = null;
+            this.txtServiceName.Location = new System.Drawing.Point(502, 137);
+            this.txtServiceName.MaxLength = 32767;
+            this.txtServiceName.Multiline = false;
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.ReadOnly = false;
+            this.txtServiceName.Size = new System.Drawing.Size(279, 41);
+            this.txtServiceName.TabIndex = 1;
+            this.txtServiceName.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtServiceName.UseSystemPasswordChar = false;
             // 
             // label2
             // 
@@ -558,20 +526,19 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnDeleteServices;
         private Bunifu.Framework.UI.BunifuFlatButton btnUpdateSearch;
         private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuFlatButton btnServiceSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private MonoFlat.MonoFlat_TextBox txtServiceSearch;
         private Bunifu.Framework.UI.BunifuFlatButton btnBrowseServiceImg;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label3;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtServiceID;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddService;
+        private MonoFlat.MonoFlat_Label txtServiceID;
+        private Guna.UI2.WinForms.Guna2TextBox txtServiceSearch;
     }
 }

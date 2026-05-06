@@ -23,8 +23,7 @@ namespace SalonManagementAPI.Controllers
         public IActionResult GetServices()
         {
             var services = _context.Services
-                .Include(s => s.Category)
-                .Where(s => s.IsActive == true) 
+                .Where(s => s.IsActive)
                 .Select(s => new
                 {
                     s.Id,
@@ -33,7 +32,10 @@ namespace SalonManagementAPI.Controllers
                     s.Duration,
                     s.CategoryId,
                     s.ImageUrl,
-                    CategoryName = s.Category.Name
+                    CategoryName = _context.Categories
+                        .Where(c => c.Id == s.CategoryId)
+                        .Select(c => c.Name)
+                        .FirstOrDefault()
                 })
                 .ToList();
 
@@ -44,10 +46,46 @@ namespace SalonManagementAPI.Controllers
         [HttpPost]
         public IActionResult AddService(Service service)
         {
+            service.IsActive = true;
+
             _context.Services.Add(service);
             _context.SaveChanges();
 
             return Ok(service);
+        }
+        // ================= UPDATE SERVICE =================
+        [HttpPut("{id}")]
+        public IActionResult UpdateService(int id, Service updatedService)
+        {
+            var service = _context.Services.Find(id);
+
+            if (service == null)
+                return NotFound();
+
+            service.Name = updatedService.Name;
+            service.Price = updatedService.Price;
+            service.Duration = updatedService.Duration;
+            service.CategoryId = updatedService.CategoryId;
+            service.ImageUrl = updatedService.ImageUrl;
+
+            _context.SaveChanges();
+
+            return Ok(service);
+        }
+        // ================= DELETE SERVICE =================
+        [HttpDelete("{id}")]
+        public IActionResult DeleteService(int id)
+        {
+            var service = _context.Services.Find(id);
+
+            if (service == null)
+                return NotFound();
+
+            service.IsActive = false;
+
+            _context.SaveChanges();
+
+            return Ok();
         }
     }
 }
