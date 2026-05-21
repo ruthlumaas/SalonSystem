@@ -49,6 +49,7 @@
             <div class="collapse navbar-collapse p-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="profile.html" class="nav-item nav-link">My Profile</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link active">Service</a>
                     <a href="price.html" class="nav-item nav-link">Price</a>
@@ -304,7 +305,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
             alert("✅ Booking successful!");
 
-            // optional reset
+            document.getElementById("bookingForm").reset();
+
+            // 🔥 CLEAR SERVICE TYPE
+            document.getElementById("serviceType").value = "";
+
+            // 🔥 RESET CONTACT DEFAULT
+            document.getElementById("contact").value = "+639";
+             // optional reset
             localStorage.removeItem("serviceId");
             localStorage.removeItem("serviceName");
 
