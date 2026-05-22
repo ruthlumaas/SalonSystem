@@ -36,6 +36,7 @@ namespace SalonManagementAPI.Controllers
         [HttpPost("login")]
         public IActionResult Login(User user)
         {
+<<<<<<< HEAD
             var email = user.Username.Trim().ToLower();
             var password = user.Password.Trim();
 
@@ -43,6 +44,12 @@ namespace SalonManagementAPI.Controllers
                 .FirstOrDefault(x =>
                     x.Email.ToLower() == email &&
                     x.Password == password);
+=======
+            var u = _context.Customers
+                .FirstOrDefault(x =>
+                    x.Email == user.Username &&
+                    x.Password == user.Password);
+>>>>>>> a3fa605c8d64d997bf0b13e434913200c5047611
 
             if (u == null)
                 return Unauthorized("Invalid email or password");
