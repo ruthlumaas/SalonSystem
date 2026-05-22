@@ -50,7 +50,8 @@
             <div class="collapse navbar-collapse p-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
+                    
+                    <a href="profile.html" class="nav-item nav-link">My Profile</a><a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link active">Service</a>
                     <a href="price.html" class="nav-item nav-link">Price</a>
                     <div class="nav-item dropdown">
@@ -173,7 +174,6 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    //<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <!-- 🔥 SCRIPT -->
 <script>
 // 🔥 GET CATEGORY ID gikan sa previous page
@@ -225,7 +225,7 @@
                         </p>
 
                     <button class="btn btn-sm btn-primary text-uppercase"
-                            onclick="book(${service.id}, '${service.name}', '${service.categoryName}')">
+                            onclick="book(${service.id}, '${service.name}')">
                             Book Now
                         </button>
                     </div>
@@ -241,12 +241,9 @@
     });
 
     // 🔥 BOOK FUNCTION
-        function book(id, name, categoryName){
-
-            const fullService = categoryName.toUpperCase() + " : " + name.toUpperCase();
-
+        function book(id, name,){
             localStorage.setItem("serviceId", id);
-            localStorage.setItem("serviceName", fullService);
+            localStorage.setItem("serviceName", name.toUpperCase());
 
             window.location.href = "booking.html";
         }

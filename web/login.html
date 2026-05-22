@@ -118,10 +118,10 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            email: email,
+            username: email,
             password: password
         })
-    })
+    }) 
     .then(response => {
         if (!response.ok) {
             throw new Error("Login failed");
@@ -132,6 +132,8 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("isLoggedIn", "true");
 
+        localStorage.setItem("customerName", data.fullName);
+        localStorage.setItem("customerEmail", data.email);
         alert("Login successful!");
 
         // 🔥 CHECK IF NAAY PENDING BOOKING

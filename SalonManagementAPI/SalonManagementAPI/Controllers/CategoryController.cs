@@ -29,5 +29,36 @@ namespace SalonManagementAPI.Controllers
 
             return Ok(category);
         }
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Category category)
+        {
+            var existing =
+                _context.Categories.FirstOrDefault(x => x.Id == id);
+
+            if (existing == null)
+                return NotFound("Category not found");
+
+            existing.Name = category.Name;
+            existing.ImageUrl = category.ImageUrl;
+
+            _context.SaveChanges();
+
+            return Ok(existing);
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var category =
+                _context.Categories.FirstOrDefault(x => x.Id == id);
+
+            if (category == null)
+                return NotFound("Category not found");
+
+            _context.Categories.Remove(category);
+
+            _context.SaveChanges();
+
+            return Ok("Category deleted");
+        }
     }
 }

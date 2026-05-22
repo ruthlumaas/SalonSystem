@@ -74,5 +74,22 @@ namespace SalonManagementAPI.Controllers
 
             return Ok("Deleted Successfully");
         }
+        [HttpGet("search/{name}")]
+        public IActionResult SearchCustomer(string name)
+        {
+            var customers =
+                _context.Customers
+                .Where(x =>
+                    x.FullName.Contains(name))
+                .Select(c => new
+                {
+                    c.Id,
+                    c.FullName,
+                    c.Email
+                })
+                .ToList();
+
+            return Ok(customers);
+        }
     }
 }

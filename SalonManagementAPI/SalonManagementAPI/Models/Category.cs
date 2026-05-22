@@ -6,8 +6,9 @@ namespace SalonManagementAPI.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        
+        public string ImageUrl { get; set; }
+
         [JsonIgnore]
-        public ICollection<Service> Services { get; set; }
+        public ICollection<Service>? Services { get; set; }
     }
 }

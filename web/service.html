@@ -58,6 +58,7 @@
             <div class="collapse navbar-collapse p-3" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="profile.html" class="nav-item nav-link">My Profile</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link active">Service</a>
                     <a href="price.html" class="nav-item nav-link">Price</a>
@@ -105,71 +106,8 @@
             <div class="text-center wow fadeIn" data-wow-delay="0.1s">
                 <h1 class="mb-5">Explore Our Services</h1>
             </div>
-            <div class="row g-4 g-md-0 text-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-end wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="img/haircut.png" alt="">
-                        <h3 class="mb-3">Haircut</h3>
-                        <p class="mb-3">Professional haircuts, styling, coloring, and treatments for all hair types.</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(1)">View More 
-                            <i
-                                class="bi bi-arrow-right">
-                            </i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-lg-end wow fadeIn" data-wow-delay="0.3s">
-                        <img class="img-fluid" src="img/makeup.png" alt="">
-                        <h3 class="mb-3">Makeup</h3>
-                        <p class="mb-3">Professional makeup for events, weddings, and everyday beauty.</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(2)">
-                            View More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-end border-lg-end-0 wow fadeIn"
-                        data-wow-delay="0.5s">
-                        <img class="img-fluid" src="img/manicure.png" alt="">
-                        <h3 class="mb-3">Manicure</h3>
-                        <p class="mb-3">Clean, polish, and enhance your nails with our manicure services.</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(3)">
-                            View More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-lg-bottom-0 border-lg-end wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img class="img-fluid" src="img/pedicure.png" alt="">
-                        <h3 class="mb-3">Pedicure</h3>
-                        <p class="mb-3">Relaxing foot care treatments for healthy and beautiful feet.</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(4)">
-                            View More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-end wow fadeIn" data-wow-delay="0.3s">
-                        <img class="img-fluid" src="img/massage.png" alt="">
-                        <h3 class="mb-3">Massage</h3>
-                        <p class="mb-3">Relax your body and mind with our professional massage services.</p>
-                       <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(5)">
-                            View More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <img class="img-fluid" src="img/skin-care.png" alt="">
-                        <h3 class="mb-3">Skin Care</h3>
-                        <p class="mb-3">Facials and treatments to keep your skin glowing and healthy.</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" onclick="goCategory(6)">
-                            View More <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="row g-4 g-md-0 text-center"
+                 id="categoryContainer">
             </div>
         </div>
     </div>
@@ -320,5 +258,75 @@
             window.location.href = "view-services.html";
         }
     </script>
+    <script>
+async function loadCategories() {
+
+    try {
+
+        const response =
+            await fetch(
+                "https://localhost:7020/api/Category"
+            );
+
+        const categories =
+            await response.json();
+
+        let html = "";
+
+        categories.forEach(category => {
+
+            let imagePath = category.imageUrl;
+
+            // if walay image
+            if (!imagePath || imagePath === "") {
+                imagePath = "img/categoryImages/default.png";
+            }
+
+            html += `
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-item h-100 p-4 border-bottom border-end wow fadeIn"
+                     data-wow-delay="0.1s">
+
+                    <img class="img-fluid mb-3"
+                         src="${imagePath}"
+                         alt="${category.name}">
+
+                    <h3 class="mb-3">
+                        ${category.name}
+                    </h3>
+
+                    <a class="btn btn-sm btn-primary text-uppercase"
+                       onclick="goCategory(${category.id})">
+
+                        VIEW MORE
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+            `;
+        });
+
+        document.getElementById(
+            "categoryContainer"
+        ).innerHTML = html;
+
+    }
+    catch (error) {
+
+        console.log(error);
+
+        document.getElementById(
+            "categoryContainer"
+        ).innerHTML =
+            "<h3>Failed to load categories.</h3>";
+    }
+}
+
+loadCategories();
+</script>
 </body>
 </html>

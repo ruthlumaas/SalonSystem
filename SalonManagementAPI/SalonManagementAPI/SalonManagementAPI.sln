@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonManagementAPI", "SalonManagementAPI.csproj", "{684CFB6D-7BC5-FC55-9EC3-4C173E4F9AF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{684CFB6D-7BC5-FC55-9EC3-4C173E4F9AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684CFB6D-7BC5-FC55-9EC3-4C173E4F9AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684CFB6D-7BC5-FC55-9EC3-4C173E4F9AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684CFB6D-7BC5-FC55-9EC3-4C173E4F9AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447F22AE-69FB-49A3-9698-97AFE32332E1}
+	EndGlobalSection
+EndGlobal
